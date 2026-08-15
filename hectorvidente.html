@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Héctor Vidente · Vidente · Astrólogo · Chamán</title>
+  <meta name="description" content="Héctor González — Vidente, Astrólogo, Chamán, Terapeuta y Facilitador. Sesiones presenciales y a distancia. Ceremonias, limpiezas, retiros y más." />
+  <meta name="keywords" content="hectorvidente, vidente, astrólogo, chamán, tarot, numerología, limpiezas, ceremonias, reiki, sanación pránica" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold:    #C9A84C;
+      --gold2:   #E8CC80;
+      --gold3:   #F5E9C2;
+      --dark:    #1A1208;
+      --cream:   #FBF7EE;
+      --white:   #FFFFFF;
+      --text:    #2C2010;
+      --light:   #F0E9D6;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── NAV ─────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(26, 18, 8, 0.96);
+      backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold2);
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: var(--gold3);
+      text-decoration: none;
+      font-size: .85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* Lang toggle */
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 4px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: .8rem;
+      letter-spacing: 1px;
+      transition: all .2s;
+    }
+    .lang-btn:hover { background: var(--gold); color: var(--dark); }
+
+    /* Mobile hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 2px; background: var(--gold2); display: block; }
+
+    /* ── HERO ─────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #1A1208 0%, #2E1F0A 45%, #1A1208 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 100px 5% 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(201,168,76,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    /* ornamental circles */
+    .hero-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(201,168,76,.15);
+      pointer-events: none;
+    }
+    .hero-ring:nth-child(1) { width: 420px; height: 420px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+    .hero-ring:nth-child(2) { width: 620px; height: 620px; top: 50%; left: 50%; transform: translate(-50%,-50%); border-color: rgba(201,168,76,.08); }
+    .hero-ring:nth-child(3) { width: 820px; height: 820px; top: 50%; left: 50%; transform: translate(-50%,-50%); border-color: rgba(201,168,76,.05); }
+
+    .hero-eyebrow {
+      font-size: .8rem; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.2rem; position: relative;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: .6rem;
+      position: relative;
+    }
+    .hero-title span { color: var(--gold2); }
+    .hero-subtitle {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: var(--gold3);
+      margin-bottom: 1.8rem;
+      position: relative;
+    }
+    .hero-desc {
+      max-width: 560px;
+      color: rgba(255,255,255,.7);
+      font-size: .95rem;
+      margin: 0 auto 2.5rem;
+      position: relative;
+    }
+    .hero-cta {
+      display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
+      position: relative;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--dark);
+      padding: 14px 36px;
+      border-radius: 40px;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 1px;
+      font-size: .9rem;
+      transition: all .25s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,.35); }
+    .btn-outline {
+      border: 1px solid var(--gold);
+      color: var(--gold2);
+      padding: 14px 36px;
+      border-radius: 40px;
+      font-weight: 400;
+      text-decoration: none;
+      letter-spacing: 1px;
+      font-size: .9rem;
+      transition: all .25s;
+      display: inline-block;
+    }
+    .btn-outline:hover { background: rgba(201,168,76,.12); transform: translateY(-2px); }
+
+    /* Social strip */
+    .hero-social {
+      position: relative;
+      margin-top: 3rem;
+      display: flex; gap: 1.4rem; align-items: center;
+    }
+    .hero-social a {
+      color: rgba(255,255,255,.45);
+      font-size: .8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .hero-social a:hover { color: var(--gold); }
+    .hero-social .sep { color: rgba(255,255,255,.2); }
+
+    /* ── SECTION COMMON ───────────────────────────── */
+    section { padding: 90px 5%; }
+    .section-label {
+      font-size: .75rem; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: .8rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--dark);
+      margin-bottom: 1.2rem;
+    }
+    .section-title span { color: var(--gold); }
+    .divider {
+      width: 60px; height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+      margin-bottom: 1.6rem;
+    }
+
+    /* ── ABOUT ────────────────────────────────────── */
+    #about {
+      background: var(--white);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5%;
+      align-items: center;
+    }
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img-placeholder {
+      width: 100%; padding-top: 120%;
+      background: linear-gradient(145deg, #2E1F0A, #1A1208);
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-img-placeholder img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; object-fit: cover; object-position: center top;
+      border-radius: 8px;
+    }
+    .about-frame {
+      position: absolute;
+      top: -16px; left: -16px;
+      right: 16px; bottom: 16px;
+      border: 1px solid var(--gold);
+      border-radius: 8px;
+      pointer-events: none;
+    }
+    .about-text p { margin-bottom: 1rem; color: #3A2A12; font-size: .97rem; }
+    .profile-tags {
+      display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.4rem;
+    }
+    .tag {
+      background: var(--gold3);
+      border: 1px solid var(--gold2);
+      color: var(--dark);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: .78rem;
+      letter-spacing: .5px;
+    }
+
+    /* ── SERVICES ─────────────────────────────────── */
+    #services { background: var(--light); }
+    .services-header { text-align: center; max-width: 600px; margin: 0 auto 3rem; }
+    .services-header .divider { margin: 0 auto 1.6rem; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.4rem;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid #E8D9B0;
+      border-radius: 10px;
+      padding: 2rem 1.6rem;
+      transition: all .25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .3s;
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(201,168,76,.15); }
+    .service-icon { font-size: 1.8rem; margin-bottom: .8rem; }
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; color: var(--dark);
+      margin-bottom: .5rem;
+    }
+    .service-card p { font-size: .87rem; color: #5A4020; line-height: 1.6; }
+
+    /* ── CEREMONIES ───────────────────────────────── */
+    #ceremonies {
+      background: linear-gradient(160deg, #1A1208, #2E1F0A);
+      color: var(--white);
+    }
+    #ceremonies .section-title { color: var(--white); }
+    #ceremonies .section-title span { color: var(--gold2); }
+    #ceremonies .section-label { color: var(--gold); }
+    .ceremonies-intro { max-width: 640px; color: rgba(255,255,255,.72); margin-bottom: 3rem; font-size: .97rem; }
+    .ceremonies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      max-width: 1200px;
+    }
+    .ceremony-item {
+      border: 1px solid rgba(201,168,76,.25);
+      border-radius: 8px;
+      padding: 1.4rem;
+      background: rgba(255,255,255,.04);
+      transition: all .25s;
+    }
+    .ceremony-item:hover { background: rgba(201,168,76,.08); border-color: rgba(201,168,76,.5); }
+    .ceremony-item .icon { font-size: 1.4rem; margin-bottom: .6rem; }
+    .ceremony-item h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold2); margin-bottom: .3rem; }
+    .ceremony-item p { font-size: .82rem; color: rgba(255,255,255,.6); line-height: 1.55; }
+
+    /* ── PRODUCTS ─────────────────────────────────── */
+    #products { background: var(--cream); }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+    }
+    .product-card {
+      background: var(--white);
+      border: 1px solid #E8D9B0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .product-top {
+      height: 160px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem;
+    }
+    .product-top.rose   { background: linear-gradient(135deg, #FFF0F3, #FFD6DF); }
+    .product-top.lavend { background: linear-gradient(135deg, #F0EDFF, #D8D0FF); }
+    .product-top.palo   { background: linear-gradient(135deg, #FFF7E6, #FFE8C0); }
+    .product-top.book   { background: linear-gradient(135deg, #E8F4FF, #C8E0F8); }
+    .product-top.forgiv { background: linear-gradient(135deg, #E8FFE8, #C8F0C8); }
+    .product-body { padding: 1.4rem; }
+    .product-body h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--dark); margin-bottom: .4rem; }
+    .product-body p { font-size: .85rem; color: #5A4020; line-height: 1.6; }
+
+    /* ── PRAYERS ──────────────────────────────────── */
+    #oraciones {
+      background: linear-gradient(160deg, #1A1208, #2E1F0A);
+      color: var(--white);
+    }
+    #oraciones .section-label { color: var(--gold); }
+    #oraciones .section-title { color: var(--white); }
+    #oraciones .section-title span { color: var(--gold2); }
+    .prayers-intro { max-width: 620px; color: rgba(255,255,255,.72); margin-bottom: 3rem; font-size: .97rem; }
+    .prayers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+    }
+    .prayer-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(201,168,76,.22);
+      border-radius: 10px;
+      padding: 2rem 1.8rem;
+      position: relative;
+      transition: all .3s;
+    }
+    .prayer-card:hover {
+      background: rgba(201,168,76,.07);
+      border-color: rgba(201,168,76,.5);
+    }
+    .prayer-card .prayer-icon {
+      font-size: 2rem; margin-bottom: .8rem;
+    }
+    .prayer-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; color: var(--gold2);
+      margin-bottom: .8rem;
+    }
+    .prayer-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: .92rem;
+      color: rgba(255,255,255,.78);
+      line-height: 1.9;
+      border-left: 2px solid rgba(201,168,76,.4);
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+    .prayer-card .prayer-intent {
+      font-size: .78rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .prayer-note {
+      max-width: 680px;
+      background: rgba(201,168,76,.08);
+      border: 1px solid rgba(201,168,76,.2);
+      border-radius: 8px;
+      padding: 1.4rem 1.8rem;
+      margin-top: 2.5rem;
+      color: rgba(255,255,255,.7);
+      font-size: .9rem;
+      line-height: 1.8;
+    }
+    .prayer-note strong { color: var(--gold2); }
+
+    /* ── SACRED CODES ─────────────────────────────── */
+    #codigos { background: var(--cream); }
+    .codes-intro { max-width: 640px; color: #5A4020; margin-bottom: 3rem; font-size: .97rem; line-height: 1.8; }
+    .codes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      max-width: 1200px;
+    }
+    .code-card {
+      background: var(--white);
+      border: 1px solid #E8D9B0;
+      border-radius: 10px;
+      padding: 1.6rem 1.2rem;
+      text-align: center;
+      transition: all .25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .code-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .3s;
+    }
+    .code-card:hover::before { transform: scaleX(1); }
+    .code-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(201,168,76,.18); }
+    .code-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 4px;
+      margin-bottom: .5rem;
+      display: block;
+    }
+    .code-title {
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      color: var(--dark);
+      margin-bottom: .4rem;
+    }
+    .code-desc {
+      font-size: .8rem;
+      color: #6A5030;
+      line-height: 1.6;
+    }
+    .codes-how {
+      max-width: 720px;
+      background: linear-gradient(135deg, #1A1208, #2E1F0A);
+      border-radius: 12px;
+      padding: 2.2rem 2.4rem;
+      margin-top: 3rem;
+      color: rgba(255,255,255,.82);
+    }
+    .codes-how h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: var(--gold2);
+      margin-bottom: 1rem;
+    }
+    .codes-how ol {
+      padding-left: 1.2rem;
+      font-size: .92rem;
+      line-height: 2.1;
+    }
+    .codes-how li { margin-bottom: .2rem; }
+    .codes-how li strong { color: var(--gold2); }
+
+    /* ── SESSIONS ─────────────────────────────────── */
+    #sessions { background: var(--white); }
+    .sessions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 900px;
+      margin-top: 2rem;
+    }
+    .session-box {
+      border: 1px solid #E8D9B0;
+      border-radius: 10px;
+      padding: 2.2rem;
+      text-align: center;
+    }
+    .session-box .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .session-box h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--dark); margin-bottom: .6rem; }
+    .session-box p { font-size: .9rem; color: #5A4020; margin-bottom: 1.4rem; }
+
+    /* ── CONTACT ──────────────────────────────────── */
+    #contact {
+      background: linear-gradient(160deg, #1A1208, #2E1F0A);
+      text-align: center;
+      color: var(--white);
+    }
+    #contact .section-label { color: var(--gold); }
+    #contact .section-title { color: var(--white); }
+    #contact .section-title span { color: var(--gold2); }
+    #contact .divider { margin: 0 auto 1.6rem; }
+    .contact-desc { max-width: 540px; margin: 0 auto 2.4rem; color: rgba(255,255,255,.7); font-size: .95rem; }
+    .contact-cards {
+      display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .contact-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(201,168,76,.25);
+      border-radius: 10px;
+      padding: 1.6rem 2rem;
+      min-width: 180px;
+      transition: all .25s;
+    }
+    .contact-card:hover { background: rgba(201,168,76,.1); border-color: var(--gold); }
+    .contact-card .icon { font-size: 1.5rem; margin-bottom: .5rem; }
+    .contact-card h4 { font-size: .75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: .4rem; }
+    .contact-card a, .contact-card p { color: rgba(255,255,255,.85); font-size: .9rem; text-decoration: none; }
+    .contact-card a:hover { color: var(--gold2); }
+    .social-row {
+      display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;
+    }
+    .social-link {
+      border: 1px solid rgba(201,168,76,.35);
+      color: var(--gold2);
+      padding: 8px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: .82rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: all .2s;
+    }
+    .social-link:hover { background: var(--gold); color: var(--dark); }
+
+    /* ── FOOTER ───────────────────────────────────── */
+    footer {
+      background: #0D0905;
+      text-align: center;
+      padding: 2rem 5%;
+      color: rgba(255,255,255,.35);
+      font-size: .78rem;
+      letter-spacing: .5px;
+    }
+    footer span { color: var(--gold); }
+
+    /* ── BILINGUAL TOGGLE ─────────────────────────── */
+    [lang-en] { display: none; }
+    body.en [lang-es] { display: none; }
+    body.en [lang-en] { display: block; }
+    body.en span[lang-en] { display: inline; }
+    body.en span[lang-es] { display: none; }
+    span[lang-en] { display: none; }
+
+    /* ── GALLERY ──────────────────────────────────── */
+    #gallery { background: var(--white); padding-bottom: 60px; }
+    .gallery-header { text-align: center; max-width: 600px; margin: 0 auto 2.5rem; }
+    .gallery-header .divider { margin: 0 auto 1.6rem; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 6px;
+      cursor: zoom-in;
+      position: relative;
+    }
+    .gallery-item.tall { grid-row: span 2; }
+    .gallery-item.wide { grid-column: span 2; }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+      display: block;
+      transition: transform .4s ease;
+      min-height: 240px;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-item::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(26,18,8,.45) 0%, transparent 60%);
+      opacity: 0; transition: opacity .3s;
+    }
+    .gallery-item:hover::after { opacity: 1; }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 500;
+      background: rgba(10,7,3,.92);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity .25s;
+    }
+    .lightbox.open { opacity: 1; pointer-events: all; }
+    .lightbox img { max-width: 92vw; max-height: 90vh; border-radius: 4px; object-fit: contain; }
+    .lightbox-close {
+      position: absolute; top: 20px; right: 24px;
+      color: var(--gold2); font-size: 2rem; cursor: pointer;
+      background: none; border: none; line-height: 1;
+    }
+
+    /* ── WHATSAPP FLOAT ───────────────────────────── */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 200;
+      width: 58px; height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.4);
+      text-decoration: none;
+      transition: transform .2s;
+      font-size: 1.7rem;
+    }
+    .wa-float:hover { transform: scale(1.1); }
+
+    /* ── RESPONSIVE ───────────────────────────────── */
+    @media (max-width: 768px) {
+      #about { grid-template-columns: 1fr; }
+      .about-img-wrap { max-width: 340px; margin: 0 auto 2rem; }
+      .sessions-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: rgba(26,18,8,.97); padding: 1.5rem 5%; gap: 1.2rem; }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a class="nav-logo" href="#">✦ HÉCTOR VIDENTE</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about"><span lang-es>Quién soy</span><span lang-en>About</span></a></li>
+    <li><a href="#services"><span lang-es>Servicios</span><span lang-en>Services</span></a></li>
+    <li><a href="#ceremonies"><span lang-es>Ceremonias</span><span lang-en>Ceremonies</span></a></li>
+    <li><a href="#gallery"><span lang-es>Galería</span><span lang-en>Gallery</span></a></li>
+    <li><a href="#oraciones"><span lang-es>Oraciones</span><span lang-en>Prayers</span></a></li>
+    <li><a href="#codigos"><span lang-es>Códigos</span><span lang-en>Codes</span></a></li>
+    <li><a href="#products"><span lang-es>Productos</span><span lang-en>Products</span></a></li>
+    <li><a href="#contact"><span lang-es>Contacto</span><span lang-en>Contact</span></a></li>
+  </ul>
+  <div style="display:flex;gap:.8rem;align-items:center;">
+    <button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button>
+    <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-ring"></div>
+  <div class="hero-ring"></div>
+  <div class="hero-ring"></div>
+
+  <p class="hero-eyebrow">✦ @hectorvidente ✦</p>
+  <h1 class="hero-title">
+    <span>Héctor</span> González
+  </h1>
+  <p class="hero-subtitle">
+    <span lang-es>Vidente · Astrólogo · Chamán · Terapeuta · Facilitador</span>
+    <span lang-en>Seer · Astrologer · Shaman · Therapist · Facilitator</span>
+  </p>
+  <p class="hero-desc">
+    <span lang-es>Un espacio de luz para sanar, crecer y reconectar con tu alma. Sesiones presenciales y a distancia disponibles para ti, donde estés en el mundo.</span>
+    <span lang-en>A space of light to heal, grow, and reconnect with your soul. In-person and remote sessions available wherever you are in the world.</span>
+  </p>
+  <div class="hero-cta">
+    <a class="btn-primary" href="https://wa.me/5255497126800" target="_blank" rel="noopener">
+      <span lang-es>📲 Agendar sesión</span>
+      <span lang-en>📲 Book a session</span>
+    </a>
+    <a class="btn-outline" href="#services">
+      <span lang-es>Ver servicios</span>
+      <span lang-en>Explore services</span>
+    </a>
+  </div>
+  <div class="hero-social">
+    <a href="https://instagram.com/hectorvidente" target="_blank" rel="noopener">Instagram</a>
+    <span class="sep">·</span>
+    <a href="https://tiktok.com/@hectorvidente" target="_blank" rel="noopener">TikTok</a>
+    <span class="sep">·</span>
+    <a href="https://facebook.com/hectorvidente" target="_blank" rel="noopener">Facebook</a>
+    <span class="sep">·</span>
+    <a href="https://youtube.com/@hectorvidente" target="_blank" rel="noopener">YouTube</a>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <div class="about-img-wrap">
+    <div class="about-img-placeholder">
+      <img src="foto4.jpg" alt="Héctor González — Chamán realizando una ceremonia" />
+    </div>
+    <div class="about-frame"></div>
+  </div>
+  <div class="about-text">
+    <p class="section-label">
+      <span lang-es>Quién soy</span>
+      <span lang-en>About me</span>
+    </p>
+    <h2 class="section-title">
+      <span lang-es>Héctor <span>González</span></span>
+      <span lang-en>Héctor <span>González</span></span>
+    </h2>
+    <div class="divider"></div>
+    <div lang-es>
+      <p>Soy Héctor González, conocido como <strong>@hectorvidente</strong>. He dedicado mi vida a caminar entre mundos: el visible y el invisible, el humano y el sagrado.</p>
+      <p>Como vidente, astrólogo, chamán, terapeuta y facilitador, acompaño a personas de todo el mundo a sanar heridas profundas, reconectar con su propósito y abrirse a una vida más plena.</p>
+      <p>Mi trabajo integra la astrología, el tarot, la numerología, las constelaciones familiares, la terapia del perdón, el reiki, la sanación pránica y el chamanismo — todo al servicio de tu transformación.</p>
+      <p>Soy autor del libro <strong>«Desde el Alma»</strong> y creador del <strong>Método del Perdón</strong>.</p>
+    </div>
+    <div lang-en>
+      <p>I am Héctor González, known as <strong>@hectorvidente</strong>. I have devoted my life to walking between worlds: the visible and the invisible, the human and the sacred.</p>
+      <p>As a seer, astrologer, shaman, therapist, and facilitator, I guide people around the world to heal deep wounds, reconnect with their purpose, and open to a more fulfilling life.</p>
+      <p>My work integrates astrology, tarot, numerology, family constellations, the forgiveness method, Reiki, pranic healing, and shamanism — all in service of your transformation.</p>
+      <p>I am the author of <strong>"Desde el Alma"</strong> and creator of the <strong>Forgiveness Method</strong>.</p>
+    </div>
+    <div class="profile-tags">
+      <span class="tag">Vidente / Seer</span>
+      <span class="tag">Astrólogo / Astrologer</span>
+      <span class="tag">Chamán / Shaman</span>
+      <span class="tag">Tarólogo / Tarot</span>
+      <span class="tag">Numerología / Numerology</span>
+      <span class="tag">Reiki</span>
+      <span class="tag">Sanación pránica</span>
+      <span class="tag">Códigos sagrados</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SERVICES ─── -->
+<section id="services">
+  <div class="services-header">
+    <p class="section-label">
+      <span lang-es>Lo que ofrezco</span>
+      <span lang-en>What I offer</span>
+    </p>
+    <h2 class="section-title">
+      <span lang-es><span>Servicios</span> y sesiones</span>
+      <span lang-en>Services &amp; <span>sessions</span></span>
+    </h2>
+    <div class="divider"></div>
+    <p style="color:#5A4020;font-size:.95rem;">
+      <span lang-es>Cada sesión es un espacio único de escucha profunda, diagnóstico energético y acompañamiento personalizado.</span>
+      <span lang-en>Each session is a unique space of deep listening, energetic diagnosis, and personalized guidance.</span>
+    </p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">🔮</div>
+      <h3><span lang-es>Lectura de vidente</span><span lang-en>Seer reading</span></h3>
+      <p lang-es>Accedo a tu campo energético y a la información que tu alma guarda. Una guía clara para el presente y el futuro.</p>
+      <p lang-en>I access your energetic field and the information your soul holds. A clear guide for your present and future.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">♈</div>
+      <h3><span lang-es>Carta natal y astrología</span><span lang-en>Birth chart &amp; astrology</span></h3>
+      <p lang-es>Análisis profundo de tu carta natal, revolución solar, tránsitos y ciclos planetarios para los próximos meses.</p>
+      <p lang-en>In-depth analysis of your birth chart, solar return, transits, and planetary cycles for the coming months.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🃏</div>
+      <h3><span lang-es>Tarot</span><span lang-en>Tarot</span></h3>
+      <p lang-es>Lecturas de tarot para orientarte en el amor, trabajo, finanzas, familia y crecimiento personal.</p>
+      <p lang-en>Tarot readings to guide you in love, work, finances, family, and personal growth.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🔢</div>
+      <h3><span lang-es>Numerología</span><span lang-en>Numerology</span></h3>
+      <p lang-es>Tu nombre y fecha de nacimiento revelan el camino de tu alma, tus talentos y tus desafíos en esta vida.</p>
+      <p lang-en>Your name and birth date reveal your soul's path, your talents, and your challenges in this lifetime.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🌿</div>
+      <h3><span lang-es>Reiki y sanación pránica</span><span lang-en>Reiki &amp; pranic healing</span></h3>
+      <p lang-es>Canalización de energía universal para limpiar bloqueos, equilibrar los chakras y promover la sanación.</p>
+      <p lang-en>Universal energy channeling to cleanse blockages, balance chakras, and promote healing.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🌀</div>
+      <h3><span lang-es>Códigos sagrados</span><span lang-en>Sacred codes</span></h3>
+      <p lang-es>Activación de frecuencias numéricas para sanar, proteger y manifestar desde el campo cuántico.</p>
+      <p lang-en>Activation of numerical frequencies to heal, protect, and manifest from the quantum field.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🌟</div>
+      <h3><span lang-es>Constelaciones familiares</span><span lang-en>Family constellations</span></h3>
+      <p lang-es>Sanar los vínculos y lealtades invisibles del sistema familiar que condicionan tu vida hoy.</p>
+      <p lang-en>Heal the invisible bonds and loyalties of the family system that condition your life today.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🌱</div>
+      <h3><span lang-es>Cursos de crecimiento personal</span><span lang-en>Personal growth courses</span></h3>
+      <p lang-es>Talleres y cursos presenciales y en línea para transformar creencias, sanar heridas y empoderar tu vida.</p>
+      <p lang-en>In-person and online workshops and courses to transform beliefs, heal wounds, and empower your life.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🧘</div>
+      <h3><span lang-es>Retiros espirituales</span><span lang-en>Spiritual retreats</span></h3>
+      <p lang-es>Experiencias inmersivas de varios días para una transformación profunda en entornos sagrados.</p>
+      <p lang-en>Multi-day immersive experiences for deep transformation in sacred environments.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── CEREMONIES ─── -->
+<section id="ceremonies">
+  <p class="section-label">
+    <span lang-es>Rituales y ceremonias</span>
+    <span lang-en>Rituals &amp; ceremonies</span>
+  </p>
+  <h2 class="section-title">
+    <span lang-es>Ceremonias <span>sagradas</span></span>
+    <span lang-en>Sacred <span>ceremonies</span></span>
+  </h2>
+  <div class="divider"></div>
+  <p class="ceremonies-intro">
+    <span lang-es>Las ceremonias son portales de transformación. Cada una abre un espacio sagrado para sanar, celebrar y conectar con lo trascendente.</span>
+    <span lang-en>Ceremonies are portals of transformation. Each one opens a sacred space to heal, celebrate, and connect with the transcendent.</span>
+  </p>
+  <div class="ceremonies-grid">
+
+    <div class="ceremony-item">
+      <div class="icon">🌊</div>
+      <h3><span lang-es>Limpiezas en el mar</span><span lang-en>Sea cleansings</span></h3>
+      <p lang-es>El mar como medicina. Limpieza de cargas energéticas con los elementos del océano y la intención sagrada.</p>
+      <p lang-en>The sea as medicine. Cleansing of energetic burdens with ocean elements and sacred intention.</p>
+    </div>
+
+    <div class="ceremony-item">
+      <div class="icon">🕯️</div>
+      <h3><span lang-es>Limpiezas energéticas</span><span lang-en>Energy cleansings</span></h3>
+      <p lang-es>Limpiezas profundas para el cuerpo, la mente y el espacio. Personas, negocios y hogares.</p>
+      <p lang-en>Deep cleansing for body, mind, and space. For people, businesses, and homes.</p>
+    </div>
+
+    <div class="ceremony-item">
+      <div class="icon">🏢</div>
+      <h3><span lang-es>Limpiezas para negocios</span><span lang-en>Business cleansings</span></h3>
+      <p lang-es>Despejar energías estancadas de locales comerciales y espacios de trabajo para atraer abundancia y flujo.</p>
+      <p lang-en>Clearing stagnant energies from commercial spaces and workplaces to attract abundance and flow.</p>
+    </div>
+
+    <div class="ceremony-item">
+      <div class="icon">🍫</div>
+      <h3><span lang-es>Ceremonias de cacao</span><span lang-en>Cacao ceremonies</span></h3>
+      <p lang-es>Medicina ancestral del cacao para abrir el corazón, sanar vínculos y conectar con la sabiduría interior.</p>
+      <p lang-en>Ancestral cacao medicine to open the heart, heal bonds, and connect with inner wisdom.</p>
+    </div>
+
+    <div class="ceremony-item">
+      <div class="icon">💍</div>
+      <h3><span lang-es>Bodas chamánicas</span><span lang-en>Shamanic weddings</span></h3>
+      <p lang-es>Uniones sagradas bajo los elementos y la tradición ancestral. Una ceremonia única e irrepetible.</p>
+      <p lang-en>Sacred unions under the elements and ancestral tradition. A unique and unrepeatable ceremony.</p>
+    </div>
+
+    <div class="ceremony-item">
+      <div class="icon">👶</div>
+      <h3><span lang-es>Bautizos chamánicos</span><span lang-en>Shamanic baptisms</span></h3>
+      <p lang-es>Bienvenida sagrada a los nuevos seres al mundo. Una bendición que acompañará su camino de vida.</p>
+      <p lang-en>Sacred welcome of new beings into the world. A blessing that will accompany their life's path.</p>
+    </div>
+
+    <div class="ceremony-item">
+      <div class="icon">✨</div>
+      <h3><span lang-es>Instalaciones</span><span lang-en>Installations</span></h3>
+      <p lang-es>Procesos de trabajo energético con objetos, símbolos y elementos para anclar intenciones en el espacio.</p>
+      <p lang-en>Energetic work processes with objects, symbols, and elements to anchor intentions in space.</p>
+    </div>
+
+    <div class="ceremony-item">
+      <div class="icon">🌙</div>
+      <h3><span lang-es>Meditaciones y círculos</span><span lang-en>Meditations &amp; circles</span></h3>
+      <p lang-es>Meditaciones guiadas, círculos de mujeres y encuentros de sanación en grupo para crecer juntos.</p>
+      <p lang-en>Guided meditations, women's circles, and group healing gatherings to grow together.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── GALLERY ─── -->
+<section id="gallery">
+  <div class="gallery-header">
+    <p class="section-label">
+      <span lang-es>Momentos sagrados</span>
+      <span lang-en>Sacred moments</span>
+    </p>
+    <h2 class="section-title">
+      <span lang-es>Ceremonias <span>en imágenes</span></span>
+      <span lang-en>Ceremonies <span>in pictures</span></span>
+    </h2>
+    <div class="divider"></div>
+    <p style="color:#5A4020;font-size:.95rem;">
+      <span lang-es>Cada ceremonia es única. Aquí algunos momentos que capturan la magia del trabajo de Héctor.</span>
+      <span lang-en>Every ceremony is unique. Here are some moments that capture the magic of Héctor's work.</span>
+    </p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item tall" onclick="openLightbox('foto4.jpg')">
+      <img src="foto4.jpg" alt="Héctor González — Ceremonia con copal" loading="lazy" />
+    </div>
+    <div class="gallery-item" onclick="openLightbox('foto1.jpg')">
+      <img src="foto1.jpg" alt="Boda chamánica — unión de manos" loading="lazy" />
+    </div>
+    <div class="gallery-item" onclick="openLightbox('foto6.jpg')">
+      <img src="foto6.jpg" alt="Héctor González — lectura energética" loading="lazy" />
+    </div>
+    <div class="gallery-item wide" onclick="openLightbox('foto3.jpg')">
+      <img src="foto3.jpg" alt="Boda chamánica — pareja con coronas de flores" loading="lazy" />
+    </div>
+    <div class="gallery-item" onclick="openLightbox('foto5.jpg')">
+      <img src="foto5.jpg" alt="Ceremonia con pétalos de rosas" loading="lazy" />
+    </div>
+    <div class="gallery-item wide" onclick="openLightbox('foto2.jpg')">
+      <img src="foto2.jpg" alt="Ceremonia en la playa" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" src="" alt="Foto ceremonial" />
+</div>
+
+<!-- ─── PRODUCTS ─── -->
+<section id="products">
+  <p class="section-label">
+    <span lang-es>Tienda energética</span>
+    <span lang-en>Energetic store</span>
+  </p>
+  <h2 class="section-title">
+    <span lang-es><span>Productos</span> con intención</span>
+    <span lang-en>Products with <span>intention</span></span>
+  </h2>
+  <div class="divider"></div>
+  <div class="products-grid">
+
+    <div class="product-card">
+      <div class="product-top rose">🌹</div>
+      <div class="product-body">
+        <h3><span lang-es>Vela de Rosas</span><span lang-en>Rose candle</span></h3>
+        <p lang-es>Para el amor, el hogar y la casa VII. Se trabaja en viernes y durante las fases de la luna que favorecen el amor.</p>
+        <p lang-en>For love, home, and the seventh house. Work on Fridays and during moon phases that favor love.</p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-top lavend">💜</div>
+      <div class="product-body">
+        <h3><span lang-es>Vela de Lavanda</span><span lang-en>Lavender candle</span></h3>
+        <p lang-es>Para la limpieza, el sueño y la casa XII. Transmutar en Luna Llena, activar en Cuarto Creciente. Domingos.</p>
+        <p lang-en>For cleansing, sleep, and the twelfth house. Transmute on Full Moon, activate on First Quarter. Sundays.</p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-top palo">🌿</div>
+      <div class="product-body">
+        <h3><span lang-es>Palo Santo</span><span lang-en>Palo Santo incense</span></h3>
+        <p lang-es>Para limpiar, armonizar e intencionar espacios. Ideal en Luna Nueva y Cuarto Menguante para liberar energías.</p>
+        <p lang-en>For cleansing, harmonizing, and setting intention in spaces. Ideal on New Moon and Last Quarter to release energies.</p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-top book">📖</div>
+      <div class="product-body">
+        <h3><span lang-es>Libro «Desde el Alma»</span><span lang-en>Book "Desde el Alma"</span></h3>
+        <p lang-es>Una obra de Héctor González que te guía por el camino del autoconocimiento y la sanación interior profunda.</p>
+        <p lang-en>A work by Héctor González that guides you on the path of self-knowledge and deep inner healing.</p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-top forgiv">🕊️</div>
+      <div class="product-body">
+        <h3><span lang-es>Método del Perdón</span><span lang-en>Forgiveness Method</span></h3>
+        <p lang-es>El proceso transformador de Héctor para soltar el peso del rencor y abrir espacio a la paz y la abundancia.</p>
+        <p lang-en>Héctor's transformative process to release the weight of resentment and open space for peace and abundance.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── ORACIONES ─── -->
+<section id="oraciones">
+  <p class="section-label">
+    <span lang-es>Palabras que sanan</span>
+    <span lang-en>Words that heal</span>
+  </p>
+  <h2 class="section-title">
+    <span lang-es>Oraciones <span>sagradas</span></span>
+    <span lang-en>Sacred <span>prayers</span></span>
+  </h2>
+  <div class="divider"></div>
+  <p class="prayers-intro">
+    <span lang-es>La oración es la tecnología más antigua del alma. No importa tu religión ni tu creencia: cuando hablas con el corazón abierto, el universo escucha. Estas oraciones las comparto desde mi práctica chamánica para que las uses en tu vida diaria con intención y fe.</span>
+    <span lang-en>Prayer is the oldest technology of the soul. Regardless of your religion or belief: when you speak with an open heart, the universe listens. I share these prayers from my shamanic practice so you can use them in your daily life with intention and faith.</span>
+  </p>
+
+  <div class="prayers-grid">
+
+    <div class="prayer-card">
+      <div class="prayer-icon">🛡️</div>
+      <h3><span lang-es>Oración de protección</span><span lang-en>Protection prayer</span></h3>
+      <p class="prayer-text" lang-es>
+        Padre, Madre, Dios, Universo:<br>
+        rodéame de tu luz dorada y protectora.<br>
+        Que ninguna energía ajena a mi bien<br>
+        pueda penetrar mi campo.<br>
+        Que mi camino esté guiado,<br>
+        que mis pasos sean firmes<br>
+        y que la gracia me acompañe hoy y siempre.<br>
+        Amén. Así es. Así sea.
+      </p>
+      <p class="prayer-text" lang-en>
+        Father, Mother, God, Universe:<br>
+        surround me with your golden protective light.<br>
+        May no energy foreign to my wellbeing<br>
+        penetrate my field.<br>
+        May my path be guided,<br>
+        my steps be firm,<br>
+        and grace accompany me today and always.<br>
+        Amen. So it is. So be it.
+      </p>
+      <p class="prayer-intent"><span lang-es>Para cada mañana · Al despertar</span><span lang-en>Every morning · Upon waking</span></p>
+    </div>
+
+    <div class="prayer-card">
+      <div class="prayer-icon">💛</div>
+      <h3><span lang-es>Oración de abundancia</span><span lang-en>Abundance prayer</span></h3>
+      <p class="prayer-text" lang-es>
+        Gracias, universo, por la abundancia<br>
+        que fluye hacia mí en todas sus formas.<br>
+        Soy un canal abierto para recibir.<br>
+        Mi trabajo prospera, mis proyectos florecen,<br>
+        el dinero llega a mí con facilidad y gracia.<br>
+        Soy digno de todo lo bueno.<br>
+        Amén. Así es. Así sea.
+      </p>
+      <p class="prayer-text" lang-en>
+        Thank you, Universe, for the abundance<br>
+        that flows to me in all its forms.<br>
+        I am an open channel to receive.<br>
+        My work prospers, my projects flourish,<br>
+        money comes to me easily and gracefully.<br>
+        I am worthy of all that is good.<br>
+        Amen. So it is. So be it.
+      </p>
+      <p class="prayer-intent"><span lang-es>Jueves y viernes · Con vela dorada</span><span lang-en>Thursday &amp; Friday · With a gold candle</span></p>
+    </div>
+
+    <div class="prayer-card">
+      <div class="prayer-icon">💗</div>
+      <h3><span lang-es>Oración de amor</span><span lang-en>Love prayer</span></h3>
+      <p class="prayer-text" lang-es>
+        Abro mi corazón al amor verdadero.<br>
+        Soy merecedor de una unión sagrada,<br>
+        basada en el respeto, la libertad y la alegría.<br>
+        El amor me encuentra, me reconoce y me elige.<br>
+        Yo también me elijo y me amo.<br>
+        El amor es mi naturaleza más profunda.<br>
+        Amén. Así es. Así sea.
+      </p>
+      <p class="prayer-text" lang-en>
+        I open my heart to true love.<br>
+        I am worthy of a sacred union<br>
+        built on respect, freedom, and joy.<br>
+        Love finds me, recognizes me, and chooses me.<br>
+        I also choose and love myself.<br>
+        Love is my deepest nature.<br>
+        Amen. So it is. So be it.
+      </p>
+      <p class="prayer-intent"><span lang-es>Viernes · Con vela de Rosas</span><span lang-en>Friday · With a rose candle</span></p>
+    </div>
+
+    <div class="prayer-card">
+      <div class="prayer-icon">🌿</div>
+      <h3><span lang-es>Oración de sanación</span><span lang-en>Healing prayer</span></h3>
+      <p class="prayer-text" lang-es>
+        Que la luz divina penetre cada célula de mi cuerpo.<br>
+        Que sane lo que necesita sanar,<br>
+        que descanse lo que necesita descansar.<br>
+        Mi cuerpo es sabio y sabe el camino de regreso<br>
+        al equilibrio, a la salud, a la vida plena.<br>
+        Gracias por la salud que tengo y la que recibo.<br>
+        Amén. Así es. Así sea.
+      </p>
+      <p class="prayer-text" lang-en>
+        May divine light penetrate every cell of my body.<br>
+        May what needs healing be healed,<br>
+        may what needs rest find rest.<br>
+        My body is wise and knows the path back<br>
+        to balance, health, and a full life.<br>
+        Thank you for the health I have and the health I receive.<br>
+        Amen. So it is. So be it.
+      </p>
+      <p class="prayer-intent"><span lang-es>Diariamente · Con reiki o palo santo</span><span lang-en>Daily · With Reiki or palo santo</span></p>
+    </div>
+
+    <div class="prayer-card">
+      <div class="prayer-icon">🕊️</div>
+      <h3><span lang-es>Oración del perdón</span><span lang-en>Forgiveness prayer</span></h3>
+      <p class="prayer-text" lang-es>
+        Hoy elijo soltar el peso del rencor.<br>
+        Perdono a quienes me han herido,<br>
+        no porque merezcan mi perdón,<br>
+        sino porque yo merezco la paz.<br>
+        Me libero de toda atadura con amor.<br>
+        Y me perdono a mí mismo por todo aquello<br>
+        que creo haber hecho mal.<br>
+        Amén. Así es. Así sea.
+      </p>
+      <p class="prayer-text" lang-en>
+        Today I choose to release the weight of resentment.<br>
+        I forgive those who have hurt me,<br>
+        not because they deserve my forgiveness,<br>
+        but because I deserve peace.<br>
+        I free myself from all bonds with love.<br>
+        And I forgive myself for everything<br>
+        I believe I did wrong.<br>
+        Amen. So it is. So be it.
+      </p>
+      <p class="prayer-intent"><span lang-es>Método del Perdón · Luna llena</span><span lang-en>Forgiveness Method · Full moon</span></p>
+    </div>
+
+    <div class="prayer-card">
+      <div class="prayer-icon">🏠</div>
+      <h3><span lang-es>Oración para el hogar</span><span lang-en>Home prayer</span></h3>
+      <p class="prayer-text" lang-es>
+        Que este hogar sea un templo de paz.<br>
+        Que solo entre en él la energía del amor,<br>
+        la alegría, la salud y la abundancia.<br>
+        Bendigo cada rincón, cada persona<br>
+        y cada momento que aquí se vive.<br>
+        Este es un lugar sagrado y protegido.<br>
+        Amén. Así es. Así sea.
+      </p>
+      <p class="prayer-text" lang-en>
+        May this home be a temple of peace.<br>
+        May only the energy of love enter,<br>
+        joy, health, and abundance.<br>
+        I bless every corner, every person,<br>
+        and every moment lived here.<br>
+        This is a sacred and protected place.<br>
+        Amen. So it is. So be it.
+      </p>
+      <p class="prayer-intent"><span lang-es>Domingo · Con palo santo en cada cuarto</span><span lang-en>Sunday · With palo santo in each room</span></p>
+    </div>
+
+  </div>
+
+  <div class="prayer-note">
+    <strong lang-es>¿Cómo usar estas oraciones?</strong>
+    <strong lang-en>How to use these prayers?</strong>
+    <br>
+    <span lang-es>Repítelas en voz alta o en silencio, de preferencia en las mañanas o antes de dormir. Puedes encender una vela con intención, quemar palo santo para limpiar el espacio, o simplemente cerrar los ojos, respirar profundo y hablar desde el corazón. La constancia es más poderosa que la perfección.</span>
+    <span lang-en>Repeat them aloud or in silence, preferably in the morning or before sleep. You can light an intention candle, burn palo santo to cleanse the space, or simply close your eyes, breathe deeply, and speak from the heart. Consistency is more powerful than perfection.</span>
+  </div>
+</section>
+
+<!-- ─── CÓDIGOS SAGRADOS ─── -->
+<section id="codigos">
+  <p class="section-label">
+    <span lang-es>Tecnología del alma</span>
+    <span lang-en>Soul technology</span>
+  </p>
+  <h2 class="section-title">
+    <span lang-es>Códigos Sagrados <span>Numéricos</span></span>
+    <span lang-en>Sacred <span>Numerical Codes</span></span>
+  </h2>
+  <div class="divider"></div>
+  <p class="codes-intro">
+    <span lang-es>Los Códigos Sagrados Numéricos son secuencias de números con una frecuencia energética específica, difundidos por el maestro <strong>Agesta</strong> y trabajados desde la sanación cuántica. Cada código activa una intención concreta en el campo áurico y en el inconsciente. Se repiten 45 veces con fe, concentración y gratitud.</span>
+    <span lang-en>Sacred Numerical Codes are sequences of numbers carrying a specific energetic frequency, spread by master <strong>Agesta</strong> and used in quantum healing. Each code activates a concrete intention in the auric field and the unconscious mind. They are repeated 45 times with faith, focus, and gratitude.</span>
+  </p>
+
+  <div class="codes-grid">
+
+    <div class="code-card">
+      <span class="code-number">1844</span>
+      <p class="code-title"><span lang-es>Dinero y abundancia</span><span lang-en>Money &amp; abundance</span></p>
+      <p class="code-desc" lang-es>Activa el flujo de prosperidad y elimina bloqueos económicos.</p>
+      <p class="code-desc" lang-en>Activates prosperity flow and removes financial blocks.</p>
+    </div>
+
+    <div class="code-card">
+      <span class="code-number">741741</span>
+      <p class="code-title"><span lang-es>Eliminar obstáculos</span><span lang-en>Remove obstacles</span></p>
+      <p class="code-desc" lang-es>Disuelve bloqueos, trabas y energías que impiden el avance.</p>
+      <p class="code-desc" lang-en>Dissolves blocks, obstacles, and energies that hinder progress.</p>
+    </div>
+
+    <div class="code-card">
+      <span class="code-number">1042</span>
+      <p class="code-title"><span lang-es>Atraer el amor</span><span lang-en>Attract love</span></p>
+      <p class="code-desc" lang-es>Activa el magnetismo amoroso y abre el corazón a la pareja ideal.</p>
+      <p class="code-desc" lang-en>Activates love magnetism and opens the heart to the ideal partner.</p>
+    </div>
+
+    <div class="code-card">
+      <span class="code-number">44333</span>
+      <p class="code-title"><span lang-es>Protección divina</span><span lang-en>Divine protection</span></p>
+      <p class="code-desc" lang-es>Escudo energético frente a energías negativas y envidias.</p>
+      <p class="code-desc" lang-en>Energetic shield against negative energies and envy.</p>
+    </div>
+
+    <div class="code-card">
+      <span class="code-number">72241</span>
+      <p class="code-title"><span lang-es>Sanación física</span><span lang-en>Physical healing</span></p>
+      <p class="code-desc" lang-es>Activa los procesos de regeneración y sanación del cuerpo físico.</p>
+      <p class="code-desc" lang-en>Activates the body's regeneration and healing processes.</p>
+    </div>
+
+    <div class="code-card">
+      <span class="code-number">45001</span>
+      <p class="code-title"><span lang-es>Trabajo y empleo</span><span lang-en>Work &amp; employment</span></p>
+      <p class="code-desc" lang-es>Abre puertas laborales, atrae oportunidades y mejoras profesionales.</p>
+      <p class="code-desc" lang-en>Opens professional doors and attracts work opportunities.</p>
+    </div>
+
+    <div class="code-card">
+      <span class="code-number">888</span>
+      <p class="code-title"><span lang-es>Abundancia infinita</span><span lang-en>Infinite abundance</span></p>
+      <p class="code-desc" lang-es>Frecuencia de la abundancia ilimitada en todos los planos de la vida.</p>
+      <p class="code-desc" lang-en>Frequency of unlimited abundance across all planes of life.</p>
+    </div>
+
+    <div class="code-card">
+      <span class="code-number">318</span>
+      <p class="code-title"><span lang-es>Sanación emocional</span><span lang-en>Emotional healing</span></p>
+      <p class="code-desc" lang-es>Libera traumas, miedos y heridas emocionales del pasado.</p>
+      <p class="code-desc" lang-en>Releases traumas, fears, and emotional wounds from the past.</p>
+    </div>
+
+    <div class="code-card">
+      <span class="code-number">2164</span>
+      <p class="code-title"><span lang-es>Limpiar el hogar</span><span lang-en>Home cleansing</span></p>
+      <p class="code-desc" lang-es>Limpia las energías del espacio físico donde vives o trabajas.</p>
+      <p class="code-desc" lang-en>Clears the energies from the physical space where you live or work.</p>
+    </div>
+
+    <div class="code-card">
+      <span class="code-number">1111</span>
+      <p class="code-title"><span lang-es>Alineación y manifestación</span><span lang-en>Alignment &amp; manifestation</span></p>
+      <p class="code-desc" lang-es>Código de apertura de portales y alineación con el propósito de vida.</p>
+      <p class="code-desc" lang-en>Portal opening code and alignment with your life purpose.</p>
+    </div>
+
+    <div class="code-card">
+      <span class="code-number">777</span>
+      <p class="code-title"><span lang-es>Conexión espiritual</span><span lang-en>Spiritual connection</span></p>
+      <p class="code-desc" lang-es>Eleva la vibración y fortalece el vínculo con los guías y la divinidad.</p>
+      <p class="code-desc" lang-en>Raises vibration and strengthens the bond with guides and the divine.</p>
+    </div>
+
+    <div class="code-card">
+      <span class="code-number">13139</span>
+      <p class="code-title"><span lang-es>Abrir caminos</span><span lang-en>Open pathways</span></p>
+      <p class="code-desc" lang-es>Despeja el camino de la vida, elimina bloqueos kármicos y abre nuevas rutas.</p>
+      <p class="code-desc" lang-en>Clears life's path, eliminates karmic blocks, and opens new routes.</p>
+    </div>
+
+  </div>
+
+  <div class="codes-how">
+    <h3>
+      <span lang-es>✦ ¿Cómo usar un código sagrado?</span>
+      <span lang-en>✦ How to use a sacred code?</span>
+    </h3>
+    <ol lang-es>
+      <li><strong>Elige un código</strong> según tu necesidad del momento.</li>
+      <li><strong>Prepara el espacio:</strong> puedes encender una vela o palo santo.</li>
+      <li><strong>Respira profundo</strong> y enfoca tu intención con claridad.</li>
+      <li><strong>Repite el código 45 veces</strong> en voz alta o mentalmente, con fe y gratitud.</li>
+      <li>Cierra con: <em>"Gracias, gracias, gracias. Así es. Así sea."</em></li>
+      <li>Puedes hacer este ejercicio <strong>una vez al día</strong> durante 21 días para mayor profundidad.</li>
+    </ol>
+    <ol lang-en>
+      <li><strong>Choose a code</strong> according to your current need.</li>
+      <li><strong>Prepare the space:</strong> you can light a candle or palo santo.</li>
+      <li><strong>Breathe deeply</strong> and focus your intention clearly.</li>
+      <li><strong>Repeat the code 45 times</strong> aloud or mentally, with faith and gratitude.</li>
+      <li>Close with: <em>"Thank you, thank you, thank you. So it is. So be it."</em></li>
+      <li>You can do this exercise <strong>once a day</strong> for 21 days for deeper results.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ─── SESSIONS ─── -->
+<section id="sessions">
+  <p class="section-label">
+    <span lang-es>Modalidades de sesión</span>
+    <span lang-en>Session types</span>
+  </p>
+  <h2 class="section-title">
+    <span lang-es>Presencial o <span>a distancia</span></span>
+    <span lang-en>In-person or <span>remote</span></span>
+  </h2>
+  <div class="divider"></div>
+  <p style="max-width:560px;color:#5A4020;font-size:.95rem;">
+    <span lang-es>Puedo acompañarte desde cualquier lugar del mundo. La energía no tiene fronteras.</span>
+    <span lang-en>I can guide you from anywhere in the world. Energy has no borders.</span>
+  </p>
+  <div class="sessions-grid">
+    <div class="session-box">
+      <div class="icon">🤝</div>
+      <h3 lang-es>Sesión presencial</h3>
+      <h3 lang-en>In-person session</h3>
+      <p lang-es>Nos encontramos en un espacio sagrado y trabajamos juntos de manera directa. Disponible en México.</p>
+      <p lang-en>We meet in a sacred space and work together directly. Available in Mexico.</p>
+      <a class="btn-primary" href="https://wa.me/5255497126800" target="_blank" rel="noopener">
+        <span lang-es>Agendar</span><span lang-en>Book now</span>
+      </a>
+    </div>
+    <div class="session-box">
+      <div class="icon">🌐</div>
+      <h3 lang-es>Sesión a distancia</h3>
+      <h3 lang-en>Remote session</h3>
+      <p lang-es>Por videollamada o WhatsApp. Recibe la misma energía y profundidad desde la comodidad de tu hogar.</p>
+      <p lang-en>Via video call or WhatsApp. Receive the same energy and depth from the comfort of your home.</p>
+      <a class="btn-primary" href="https://wa.me/5255497126800" target="_blank" rel="noopener">
+        <span lang-es>Agendar</span><span lang-en>Book now</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <p class="section-label">
+    <span lang-es>Escríbeme</span>
+    <span lang-en>Get in touch</span>
+  </p>
+  <h2 class="section-title">
+    <span lang-es>Conecta <span>conmigo</span></span>
+    <span lang-en>Connect <span>with me</span></span>
+  </h2>
+  <div class="divider"></div>
+  <p class="contact-desc">
+    <span lang-es>Escríbeme por WhatsApp para agendar tu sesión, hacer una consulta o conocer más sobre mis servicios y ceremonias.</span>
+    <span lang-en>Message me on WhatsApp to book your session, ask a question, or learn more about my services and ceremonies.</span>
+  </p>
+  <div class="contact-cards">
+    <div class="contact-card">
+      <div class="icon">📱</div>
+      <h4>WhatsApp</h4>
+      <a href="https://wa.me/5255497126800" target="_blank" rel="noopener">+52 55 4971 2680</a>
+    </div>
+    <div class="contact-card">
+      <div class="icon">📧</div>
+      <h4>Email</h4>
+      <a href="mailto:hectorjosegonzalez1@gmail.com">hectorjosegonzalez1@gmail.com</a>
+    </div>
+    <div class="contact-card">
+      <div class="icon">🌐</div>
+      <h4>Web</h4>
+      <p>www.hectorvidente.com</p>
+    </div>
+  </div>
+  <div class="social-row">
+    <a class="social-link" href="https://instagram.com/hectorvidente" target="_blank" rel="noopener">Instagram</a>
+    <a class="social-link" href="https://tiktok.com/@hectorvidente" target="_blank" rel="noopener">TikTok</a>
+    <a class="social-link" href="https://facebook.com/hectorvidente" target="_blank" rel="noopener">Facebook</a>
+    <a class="social-link" href="https://youtube.com/@hectorvidente" target="_blank" rel="noopener">YouTube</a>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <p>© 2026 <span>Héctor González · @hectorvidente</span> · www.hectorvidente.com · WhatsApp +52 55 4971 2680</p>
+  <p style="margin-top:.4rem;">
+    <span lang-es>Vidente · Astrólogo · Chamán · Terapeuta · Facilitador</span>
+    <span lang-en>Seer · Astrologer · Shaman · Therapist · Facilitator</span>
+  </p>
+</footer>
+
+<!-- ─── WHATSAPP FLOAT ─── -->
+<a class="wa-float" href="https://wa.me/5255497126800" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+
+<script>
+  function toggleLang() {
+    const body = document.body;
+    const btn  = document.getElementById('langBtn');
+    if (body.classList.contains('en')) {
+      body.classList.remove('en');
+      btn.textContent = 'EN';
+      document.documentElement.setAttribute('lang', 'es');
+    } else {
+      body.classList.add('en');
+      btn.textContent = 'ES';
+      document.documentElement.setAttribute('lang', 'en');
+    }
+  }
+
+  function openLightbox(src) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  // Smooth scroll offset for fixed nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.scrollY - 70;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
